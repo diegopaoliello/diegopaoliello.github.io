@@ -9,6 +9,7 @@ import { TodoService } from './todo.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
+  title:string = 'Lista de Compras';
   todos: Todo[] = [];
   form: FormGroup = new FormGroup({
     description: new FormControl('', [

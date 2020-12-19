@@ -1,8 +1,8 @@
 <nav class="navbar navbar-dark bg-dark">
-  <a class="navbar-brand">Todo App</a>
+  <a class="navbar-brand">{{ title }}</a>
 </nav>
 <div class="container mt-4">
-  <h3>Todos</h3>
+  <h3>Lista</h3>
   <hr />
   <form [formGroup]="form" (ngSubmit)="submit()">
     <div class="row">
@@ -15,7 +15,7 @@
           [disabled]="!form.get('description')?.value"
           class="btn btn-primary"
         >
-          Add
+          Adicionar
         </button>
       </div>
     </div>
@@ -37,10 +37,10 @@
               [disabled]="todo.done"
               (click)="done(todo)"
             >
-              Done
+              Ok
             </button>
             <button class="btn btn-danger" (click)="delete(todo)">
-              Delete
+              Excluir
             </button>
           </div>
         </li>
